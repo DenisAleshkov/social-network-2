@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.header__list {
+    display: flex;
+}
+
+.header__link {
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .5s ease;
+    cursor: pointer
+}
+
+.header__link:hover {
+    color: #4458dc;
+}
+.header__item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.container {
+    padding: 0 calc(50% - 570px);
+}
+
+.active {
+    color: #4458dc;
+}
+  
