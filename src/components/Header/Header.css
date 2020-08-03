@@ -4,11 +4,11 @@
     justify-content: space-between;
     padding-top: 10px;
 }
-.header__list {
+.header-list {
     display: flex;
 }
 
-.header__link {
+.header-link {
     text-transform: uppercase;
     color: #000000;
     font-size: 14px;
@@ -17,10 +17,10 @@
     cursor: pointer
 }
 
-.header__link:hover {
+.header-link:hover {
     color: #4458dc;
 }
-.header__item:not(:last-child) {
+.header-item:not(:last-child) {
     margin-right: 45px;
 }
 

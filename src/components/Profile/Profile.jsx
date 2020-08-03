@@ -1,18 +1,17 @@
 import React from 'react';
-import style from './Profile.module.css';
-import Avatar from './../../img/banner/home-right.png';
+import './Profile.css';
 import MyPosts from './MyPosts/MyPosts.jsx';
+import ProfileInfo from './ProfileInfo/ProfileInfo.jsx';
 
-const Profile = () => {
+const Profile = (props) => {
+
+   
+
     return (
-        <div className={style.profile}>
-            <div className={style.profile__wrapper}>
-                <div className={style.profile__avatar}>
-                    <img src={Avatar} alt="profile-photo" />
-                </div>
-                <div className={`${style.profile__posts} ${style.post}`}>
-                    <MyPosts />
-                </div>
+        <div className="profile">
+            <div className="profile-wrapper">
+                <ProfileInfo />
+                <MyPosts posts={props.profilePage.posts} addPost={props.addPost} />
             </div>
         </div>
     )

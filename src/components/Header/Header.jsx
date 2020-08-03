@@ -1,25 +1,25 @@
 import React from 'react';
-import style from './Header.module.css';
+import './Header.css';
 import logo from './../../img/logo.png'
 import {NavLink} from 'react-router-dom';
 
 const Header = () => {
 	return (
-		<header className={style.header}>
-			<div className={style.header__logo}>
+		<header className="header">
+			<div className="header-logo">
 				<NavLink to='/profile'>
 					<img src={logo} alt="logo" />
 				</NavLink>
 			</div>
-			<div className={style.header__block}>
-				<ul className={style.header__list}>
-					<li className={style.header__item}>
-						<NavLink to='/profile' className={style.header__link} activeClassName={style.active}>
+			<div className="header-block">
+				<ul className="header-list">
+					<li className="header-item">
+						<NavLink to='/profile' className="header-link" activeClassName="active">
 							Profile
 						</NavLink>
 					</li>
-					<li className={style.header__item}>
-						<NavLink to='/messages' className={style.header__link} activeClassName={style.active}>
+					<li className="header-item">
+						<NavLink to='/messages' className="header-link" activeClassName="active">
 							Messages
 						</NavLink>
 					</li>

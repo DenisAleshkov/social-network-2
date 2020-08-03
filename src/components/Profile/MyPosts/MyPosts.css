@@ -1,0 +1,18 @@
+.controllers {
+   display: flex;
+   flex-direction: column;
+   background: #fafaff;
+   text-align: center;
+   border: 1px solid #eee;
+   padding: 47px 30px 43px;
+}
+
+.controllers-send {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.posts-list {
+    margin-top: 20px;
+}

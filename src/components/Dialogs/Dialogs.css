@@ -1,9 +1,9 @@
-.profile {
+.dialogs {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.profile__avatar img {
-    height: 400px;
+.dialogs-wrapper {
+    display: flex;
 }

@@ -1,24 +1,32 @@
 import React from 'react';
-import style from './MyPosts.module.css';
+import './MyPosts.css';
 import Post from './Post/Post.jsx';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+    let posts = props.posts.map( (p, index) => <Post key={index+p.likesCount} message={p.message} likesCount={p.likesCount}  /> )
+
+    let newPostElement = React.createRef();
+
+    const AddPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    }
+
     return (
-        <div className={style.posts}>
-            <div className={`${style.posts__controlers} ${style.controllers}`}>
-                <div className={style.controllers__input}>
-                    <textarea className={style.controllers__textarea}
+        <div className="posts">
+            <div className="posts-controlers controllers">
+                <div className="controllers-input">
+                    <textarea ref={newPostElement} className="controllers-textarea"
                                 placeholder="Enter post text"                            
                     ></textarea>
                 </div>
-                <div className={style.controllers__send}>
-                    <button className={style.controllers__button}>Add post</button>
+                <div className="controllers-send">
+                    <button onClick={AddPost} className="controllers-button">Add post</button>
                 </div>   
             </div>
-            <div className={style.posts__list}>
-                <Post message='hi!' />
-                <Post message='1st post' />
-                <Post message='it`s good '/>
+            <div className="posts-list">
+                {posts}
             </div>
         </div>
     )
